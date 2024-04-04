@@ -1,0 +1,8 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+nav {
+    background-color: rgb(96, 205, 238);
+}
