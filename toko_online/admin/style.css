@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@1,6..12,900&family=Open+Sans:ital,wght@1,500&family=Poppins:wght@900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+  background-color: #282829;
+  color: white;
+}
+/*------------------------------------ HEADER -------------------------------------- */
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #181a1f;
+  padding: 20px;
+}
+
+nav .logo {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 25px;
+  transition: all 1s;
+  color: white;
+}
+
+nav .logo:hover {
+  background: linear-gradient(0deg, #07e22c 0%, #ffffff 100%);
+  color: transparent;
+  background-clip: text;
+  transform: scale(1.1);
+}
+
+nav .nav-link,
+.login {
+  display: flex;
+  align-items: center;
+}
+
+nav .nav-link .link-nav {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  transition: all 0.5s;
+}
+
+nav .nav-link .link-nav:hover {
+  color: rgb(30, 238, 3);
+  background-image: linear-gradient(to right, transparent, rgb(40, 240, 14));
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+}
+
+nav .login button {
+  margin: 0px 10px;
+  padding: 7px 13px;
+}
+
+nav .login button:first-child {
+  background-color: transparent;
+  color: white;
+  background-color: red;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+nav .login button:first-child:hover {
+  transform: scale(1.1);
+  border: 1px solid rgb(167, 167, 167);
+  color: rgb(182, 182, 182);
+  border-radius: 15px;
+  background-color: transparent;
+}
+nav .login button a{
+  text-decoration: none;
+  color: white;
+}
+
+nav .menu-toggle {
+  font-size: 25px;
+  display: none;
+  color: white;
+}
+@media screen and (max-width: 810px) {
+  nav .nav-link {
+    position: absolute;
+    flex-direction: column;
+    right: 0;
+    top: 74px;
+    width: 75%;
+    height: 70vh;
+    justify-content: space-evenly;
+    background-color: #181a1f;
+    transform: translateY(-120%);
+    transition: all 1s;
+    z-index: 2;
+  }
+
+  nav .nav-link.slide {
+    transform: translateY(0);
+  }
+
+  nav .login {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav .login button:first-child {
+    width: 70%;
+    margin: 20px 0;
+  }
+
+  nav .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+/* -------------------------------------- AKHIR HEADER ----------------------------------------- */
+
+
+
+/* ------------------------------------------ BERANDA MAIN -------------------------------------- */
+.beranda main .container{
+  padding: 40px;
+  border: 1px solid;
+}
+.beranda main .container .box{
+  width: 90%;
+  height: 40px;
+  padding: 20px;
+  border: 1px solid;
+}
+/* ------------------------------------------- AKHIR BERANDA MAIN ------------------------------------------ */
+
+
+
+/* ---------------------------------------- PROFIL MAIN ------------------------------------------------------*/
+.profil main{
+  padding: 40px;
+}
+.profil main .container{
+  padding: 40px; 
+   border: 1px solid white;
+}
+.profil main .container h1{
+  padding-bottom: 40px;
+  font-size: 50px;
+}
+.profil main .container-form{
+  display: flex;
+  justify-content: center;
+}
+.profil main .container .form-group{
+  padding: 20px;
+}
+.profil main .container .form-group input,select{
+  border-radius: 20px;
+  margin: 10px 0;
+  padding: 0 10px;
+  width: 100%;
+  height: 35px;
+  background-color: #282829;
+  border: 1px solid white;
+  color: white;
+}
+.profil main .form-profil{
+  width: 80%;
+}
+.profil main .form-profil button{
+  padding: 10px 15px;
+  margin: 0 30px;
+  border-radius: 12px;
+  background-color: #343534;
+  color: white;
+  border: 1px solid white;
+  transition: all 0.5s;
+}
+.profil main .form-profil button:hover{
+  border: 1px solid #343534;
+  background-color: #141614;
+}
+/* ---------------------------------------- AKHIR PROFIL MAIN ------------------------------------------------------*/
+
+
+/* -------------------------------------------- DATA KATEGORI ---------------------------------------------------- */
+.data-kategori main{
+  padding: 40px;
+}
+.data-kategori main .container{
+  padding: 40px; 
+}
+.data-kategori main .container .box{
+  border: 1px solid white;
+  padding: 20px;
+}
+.data-kategori main .container h1{ 
+  padding-bottom: 30px; 
+}
+.data-kategori main .container .tambahdata{
+  padding: 10px 0;
+}
+.data-kategori main .container .tambahdata a{
+  color: white;
+}
+.data-kategori main .container table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.data-kategori main .container table tr th{
+  padding: 7px;
+}
+.data-kategori main .container table tr td{
+  padding: 7px 30px;
+}
+.data-kategori main .container table tbody td button a{
+  text-decoration: none;
+  color: white;
+}
+.data-kategori main .container table tbody td button{
+  padding: 7px 12px;
+  margin: 5px;
+  border: none;
+}
+.data-kategori main .container table tbody td button:nth-child(1){
+  background-color: blue;
+  transition: all 0.5s;
+  border: 1px solid rgb(1, 1, 185);
+}
+.data-kategori main .container table tbody td button:nth-child(1):hover{
+  background-color: rgb(1, 1, 133);
+  border: 1px solid white;
+}
+.data-kategori main .container table tbody td button:nth-child(2){
+  background-color: red;
+  border: 1px solid rgb(175, 0, 0);
+  transition: all 0.5s;
+}
+.data-kategori main .container table tbody td button:nth-child(2):hover{
+  background-color: rgb(143, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
+}
+.data-kategori .table-container {
+    overflow-x: auto;
+}
+
+.data-kategori table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.data-kategori th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    .data-kategori th, td {
+        font-size: 14px;
+    }
+}
+
+/* -------------------------------------------- AKHIR DATA KATEGORI ---------------------------------------------------- */

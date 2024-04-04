@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@1,6..12,900&family=Open+Sans:ital,wght@1,500&family=Poppins:wght@900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #282829;
+  color: white;
+}
+/*------------------------------------ HEADER -------------------------------------- */
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #181a1f;
+  padding: 20px;
+}
+
+nav .logo {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 25px;
+  transition: all 1s;
+  color: white;
+}
+
+nav .logo:hover {
+  background: linear-gradient(0deg, #07e22c 0%, #ffffff 100%);
+  color: transparent;
+  background-clip: text;
+  transform: scale(1.1);
+}
+
+nav .nav-link,
+.login {
+  display: flex;
+  align-items: center;
+}
+
+nav .nav-link .link-nav {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  transition: all 0.5s;
+}
+
+nav .nav-link .link-nav:hover {
+  color: rgb(30, 238, 3);
+  background-image: linear-gradient(to right, transparent, rgb(40, 240, 14));
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+}
+
+nav .login button {
+  margin: 0px 10px;
+  padding: 7px 13px;
+}
+
+nav .login button:first-child {
+  background-color: transparent;
+  color: white;
+  background-color: red;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+nav .login button:first-child:hover {
+  transform: scale(1.1);
+  border: 1px solid rgb(167, 167, 167);
+  color: rgb(182, 182, 182);
+  border-radius: 15px;
+  background-color: transparent;
+}
+nav .login button a {
+  text-decoration: none;
+  color: white;
+}
+
+nav .menu-toggle {
+  font-size: 25px;
+  display: none;
+  color: white;
+}
+@media screen and (max-width: 810px) {
+  nav .nav-link {
+    position: absolute;
+    flex-direction: column;
+    right: 0;
+    top: 74px;
+    width: 75%;
+    height: 70vh;
+    justify-content: space-evenly;
+    background-color: #181a1f;
+    transform: translateY(-120%);
+    transition: all 1s;
+    z-index: 2;
+  }
+
+  nav .nav-link.slide {
+    transform: translateY(0);
+  }
+
+  nav .login {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav .login button:first-child {
+    width: 70%;
+    margin: 20px 0;
+  }
+
+  nav .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+/* -------------------------------------- AKHIR HEADER ----------------------------------------- */
+
+/*---------------------------------------- BERANDA -------------------------------------------*/
+.beranda main {
+  padding: 20px;
+}
+.beranda .search {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.beranda input {
+  width: 80%;
+  height: 40px;
+  background-color: #181a1f;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  margin-right: 10px;
+}
+
+.beranda span {
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.beranda main .container {
+  margin: 20px;
+  background-color: #181a1f;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid white;
+  box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
+}
+
+.beranda .card {
+  width: 350px;
+  height: auto;
+  border: 1px solid white;
+  background-color: #282829;
+  overflow: hidden;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
+}
+.beranda .card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.beranda .card-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.beranda .card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.beranda .card-price {
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.beranda .buy-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  border: 1px solid #4caf50;
+  transition: all 0.5s;
+}
+.beranda .buy-btn:hover {
+  background-color: #00a01b;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+.beranda button a {
+  text-decoration: none;
+  color: white;
+}
+@media screen and (max-width: 870px) {
+  .beranda .card {
+    width: 300px;
+    height: auto;
+  }
+  .beranda .card-img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .beranda .card-info {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .beranda .card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .beranda .card-price {
+    margin-bottom: 10px;
+  }
+
+  .beranda .buy-btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 765px) {
+  .beranda .card {
+    width: 200px;
+    height: auto;
+  }
+  .beranda .card-img {
+    width: 100%;
+    height: 120px;
+  }
+
+  .beranda .card-info {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .beranda .card-title {
+    font-size: 1em;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .beranda .card-price {
+    margin-bottom: 10px;
+    font-size: 0.7em;
+  }
+
+  .beranda .buy-btn {
+    padding: 8px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 570px) {
+  .beranda .search {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .beranda main .container {
+    padding: 5px;
+  }
+  .beranda .card {
+    width: 150px;
+    height: auto;
+  }
+  .beranda .card-img {
+    width: 100%;
+    height: 100px;
+  }
+
+  .beranda .card-info {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .beranda .card-title {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .beranda .card-price {
+    margin-bottom: 10px;
+    font-size: 0.7em;
+  }
+
+  .beranda .buy-btn {
+    padding: 8px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 470px) {
+  .beranda .card {
+    width: 100px;
+    height: auto;
+  }
+  .beranda .card-img {
+    width: 100%;
+    height: 80px;
+  }
+
+  .beranda .card-info {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .beranda .card-title {
+    font-size: 0.6em;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .beranda .card-price {
+    margin-bottom: 10px;
+    font-size: 0.6em;
+  }
+
+  .beranda .buy-btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.6em;
+  }
+}
+/*---------------------------------------- AKHIR BERANDA -------------------------------------------*/
+
+/* Profil */
+.profil main {
+  padding: 40px;
+}
+.profil main .container {
+  padding: 40px;
+  border: 1px solid white;
+}
+.profil main .container h1 {
+  padding-bottom: 40px;
+  font-size: 50px;
+}
+.profil main .container-form {
+  display: flex;
+  justify-content: center;
+}
+.profil main .container .form-group {
+  padding: 20px;
+}
+.profil main .container .form-group input,
+select {
+  border-radius: 20px;
+  margin: 10px 0;
+  padding: 0 10px;
+  width: 100%;
+  height: 35px;
+  background-color: #282829;
+  border: 1px solid white;
+  color: white;
+}
+.profil main .form-profil {
+  width: 80%;
+}
+.profil main .form-profil button {
+  padding: 10px 15px;
+  margin: 0 30px;
+  border-radius: 12px;
+  background-color: #343534;
+  color: white;
+  border: 1px solid white;
+  transition: all 0.5s;
+}
+.profil main .form-profil button:hover {
+  border: 1px solid #343534;
+  background-color: #141614;
+}
+/* Akhir Profil */

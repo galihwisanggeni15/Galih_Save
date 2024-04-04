@@ -1,0 +1,438 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #11101D;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+.sidebar.open{
+  width: 250px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar .logo-details .logo_name{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+.sidebar i{
+  color: #fff;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+  display: none;
+}
+.sidebar input{
+  font-size: 15px;
+  color: #FFF;
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: #1d1b31;
+}
+.sidebar.open input{
+  padding: 0 20px 0 50px;
+  width: 100%;
+}
+.sidebar .bx-search{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar.open .bx-search:hover{
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar .bx-search:hover{
+  background: #FFF;
+  color: #11101d;
+}
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #11101D;
+}
+.sidebar li a:hover{
+  background: #FFF;
+}
+.sidebar li a .links_name{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #11101D;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li.profile{
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #1d1b31;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar.open li.profile{
+  width: 250px;
+}
+.sidebar li .profile-details{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sidebar li img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.sidebar li.profile .name,
+.sidebar li.profile .job{
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+.sidebar li.profile .job{
+  font-size: 12px;
+}
+.sidebar .profile #log_out{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #1d1b31;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+.sidebar.open .profile #log_out{
+  width: 50px;
+  background: none;
+}
+.home-section{
+  position: relative;
+  background: #E4E9F7;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
+.home-section{
+    padding: 30px;
+}
+.home-section .text{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+
+
+/* ------------------------INDEX----------------------- */
+.index .container{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+.index .card{
+  width: 250px;
+  margin: 30px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.text-isi{
+  padding: 10px;
+}
+.index .card .text-isi h6{
+  font-size: 17px;
+}
+.index .card .text-isi .desk{
+  font-size: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: left;
+}
+.index .card .text-isi p{
+  font-size: 15px;
+  text-align: left;
+}
+.index .card .text-isi a{
+  font-size: 10px;
+  padding: 7px 13px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: #06d444;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.index .card .text-isi a:hover{
+  background-color: transparent;
+  color: black;
+}
+
+/* --------------------------PROFIL------------------------ */
+.profil .card{
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #c5c6c7;
+}
+.profil .card h1{
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+}
+.profil form{
+  padding: 50px 20%;
+  text-align: center;
+}
+.profil .form-group{
+  margin: 20px;
+}
+.profil .form-group label{
+  font-size: 20px;
+  display: block;
+  text-align: left;
+  margin-bottom: -20px;
+}
+.profil .form-group input,select{
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+.profil form button{
+  padding: 7px 13px;
+  background-color: #098f31;
+  color: white;
+  border: 1px solid white;
+  transition: all 0.5s;
+}
+.profil form button:hover{
+  background-color: #066b24;
+  color: white;
+  border: 1px solid white;
+}
+
+
+
+/* -------------------------------------dataproduct------------------------------- */
+.product .card {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #c5c6c7;
+}
+
+.product .card h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+}
+.product .isi{
+  padding: 0 5%;
+}
+.product table {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse; /* Collapse borders to have a single border */
+}
+
+.product table, .product th, .product td {
+    border: 1px solid black; /* Set border to 1px solid black for table, th, and td */
+}
+/* Make the table responsive for small screens */
+@media (max-width: 767px) {
+    .product table {
+        overflow-x: auto;
+        display: block;
+    }
+}
+
+/* -------------------USER DESKRIPSI PRODUK-------------------------- */
+.deskripsi .card{
+  border: 1px solid black;
+  display: flex;
+  padding: 20px;
+}
+.deskripsi .card .text table tbody tr .jarak{
+  width: 200px;
+}
+.deskripsi .card .text table tbody tr td{
+  font-size: 15px;
+}
+.deskripsi .card .text table tbody tr .deskripsii {
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Show only one line by default */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: left;
+    cursor: pointer; /* Add pointer cursor to indicate it's clickable */
+}
+
+.deskripsi .card .text table tbody tr .deskripsii.full {
+    -webkit-line-clamp: unset; /* Show all lines when the 'full' class is applied */
+}
+.deskripsi .card .text .butbuy a{
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+}
+.deskripsi .card .text .butbuy a:first-child{
+  padding: 7px 13px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: #06d444;
+  color: white;
+  transition: all 0.5s;
+}
+.deskripsi .card .text .butbuy a:first-child:hover{
+  background-color: #05852b;
+}
+.deskripsi .card .text .butbuy a:nth-child(2){
+  padding: 7px 13px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: #0658d4;
+  color: white;
+  transition: all 0.5s;
+}
+.deskripsi .card .text .butbuy a:nth-child(2):hover{
+  background-color: #0748a8;
+}
+.deskripsi .card .text .butbuy p{
+  font-size: 13px;
+}
